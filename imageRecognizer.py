@@ -3,7 +3,7 @@ from pytesseract import Output
 
 
 class ImageRecognizer:
-    def __init__(self, image, *, psm=11, char_whitelist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"):
+    def __init__(self, image, *, psm=6, char_whitelist="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"):
         self.image = image
         self.config = f"--psm {psm} tessedit_char_whitelist = {char_whitelist}"
         self.processed = False
